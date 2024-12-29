@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <!-- Input Fields -->
+        <VBox layoutX="10" layoutY="10" spacing="10">
+            <HBox spacing="10">
+                <Label text="Pelanggan ID:" />
+            </HBox>
+             <TextField fx:id="txtPelangganId" prefHeight="25.0" prefWidth="158.0" />
+            <HBox spacing="10">
+                <Label text="Buku ID:" />
+            </HBox>
+             <TextField fx:id="txtBukuId" prefWidth="200" />
+            <HBox spacing="10">
+                <Label text="Jumlah:" />
+            </HBox>
+             <TextField fx:id="txtJumlah" prefHeight="25.0" prefWidth="247.0" />
+            <HBox spacing="10" />
+            <HBox spacing="10" />
+            <HBox spacing="10" />
+        </VBox>
+
+        <!-- TableView for Data Penjualan -->
+        <TableView fx:id="tablePenjualan" layoutY="198.0" prefHeight="252.0" prefWidth="590.0">
+            <columns>
+                <TableColumn fx:id="colPenjualanId" prefWidth="100" text="Penjualan ID" />
+                <TableColumn fx:id="colJumlah" prefWidth="80" text="Jumlah" />
+                <TableColumn fx:id="colTotalHarga" prefWidth="100" text="Total Harga" />
+                <TableColumn fx:id="colTanggal" prefWidth="100" text="Tanggal" />
+                <TableColumn fx:id="colPelangganId" prefWidth="100" text="Pelanggan ID" />
+                <TableColumn fx:id="colBukuId" prefWidth="100" text="Buku ID" />
+            </columns>
+        </TableView>
+          <Label layoutX="329.0" layoutY="10.0" text="Total Harga:" />
+          <TextField fx:id="txtTotalHarga" layoutX="327.0" layoutY="36.0" prefHeight="25.0" prefWidth="234.0" />
+          <Label layoutX="326.0" layoutY="75.0" text="Tanggal:" />
+          <DatePicker fx:id="dateTanggal" layoutX="329.0" layoutY="100.0" prefHeight="25.0" prefWidth="234.0" />
+          <Button fx:id="btnAddPenjualan" layoutX="329.0" layoutY="162.0" prefHeight="25.0" prefWidth="73.0" text="Tambah" />
+          <Button fx:id="btnEditPenjualan" layoutX="418.0" layoutY="162.0" prefHeight="25.0" prefWidth="65.0" text="Edit" />
+          <Button fx:id="btnDeletePenjualan" layoutX="498.0" layoutY="162.0" prefHeight="25.0" prefWidth="65.0" text="Hapus" />
+    </children>
+</AnchorPane>
